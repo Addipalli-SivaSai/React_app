@@ -21,12 +21,9 @@ pipeline {
              '''
             }
         }
-          stage('runing') {
-            steps {   
-             bat '''
-             cd vite-project
-             npm run dev
-             '''
+          stage('Archive Artifacts') {
+            steps {
+                archiveArtifacts artifacts: 'build/**', allowEmptyArchive: true
             }
         }
     }
