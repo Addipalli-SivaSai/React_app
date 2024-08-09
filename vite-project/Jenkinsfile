@@ -23,7 +23,7 @@ pipeline {
         }
           stage('Archive Artifacts') {
             steps {
-                bat 'tar -cvf build.tar vite-project\\dist\\'
+                bat 'tar -cvf build.tar C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\React_Application\\vite-project\\dist'
                 // bat 'dir'
                 // bat 'type build.tar'
                 // archiveArtifacts artifacts: 'build.tar', allowEmptyArchive: true
