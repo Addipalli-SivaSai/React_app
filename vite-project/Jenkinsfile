@@ -24,7 +24,7 @@ pipeline {
           stage('Archive Artifacts') {
             steps {
                 bat 'tar -cvf build.tar vite-project\\dist\\'
-                archiveArtifacts artifacts: 'vite-project/dist/**', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'build.tar', allowEmptyArchive: true
             }
         }
     }
