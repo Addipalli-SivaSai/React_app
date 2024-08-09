@@ -23,7 +23,7 @@ pipeline {
         }
           stage('Archive Artifacts') {
             steps {
-                archiveArtifacts artifacts: 'build/**', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'vite-project/dist/**', allowEmptyArchive: true
             }
         }
     }
