@@ -17,6 +17,14 @@ pipeline {
              bat '''
              cd vite-project
              npm run build
+            
+             '''
+            }
+        }
+          stage('runing') {
+            steps {   
+             bat '''
+             cd vite-project
              npm run dev
              '''
             }
