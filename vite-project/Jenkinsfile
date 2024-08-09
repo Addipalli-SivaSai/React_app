@@ -14,10 +14,7 @@ pipeline {
         }
         stage('Building') {
             steps {
-             bat '''
-             cd vite-project
-             npx vite build
-             '''
+             bat 'npm run build'
             }
         }
     }
