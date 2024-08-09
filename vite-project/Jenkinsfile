@@ -16,7 +16,7 @@ pipeline {
             steps {
              bat '''
              cd vite-project
-             npm run build
+             npx run build
              '''
             }
         }
