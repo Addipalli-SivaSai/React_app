@@ -23,10 +23,11 @@ pipeline {
         }
           stage('Archive Artifacts') {
             steps {
-                bat 'tar -cvf build.tar C:\\ProgramData\\Jenkins\\.jenkins\\workspace\\React_Application\\vite-project\\dist'
+                bat 'powershell.exe -Command "Compress-Archive -Path vite-project\\dist\\* -DestinationPath build.zip"'
+ 
                 // bat 'dir'
                 bat 'type build.tar'
-                archiveArtifacts artifacts: 'build.tar', allowEmptyArchive: true
+                archiveArtifacts artifacts: 'build.zip', allowEmptyArchive: true
             }
         }
     }
