@@ -42,14 +42,21 @@ pipeline {
 
 
         }
-          stage('Archive Artifacts') {
-            steps {
-                bat 'powershell.exe -Command "Compress-Archive -Path vite-project\\dist\\* -DestinationPath build.zip -Update"'
+        //   stage('Archive Artifacts') {
+        //     steps {
+        //         bat 'powershell.exe -Command "Compress-Archive -Path vite-project\\dist\\* -DestinationPath build.zip -Update"'
  
-                // bat 'dir'
-                bat 'type build.tar'
-                archiveArtifacts artifacts: 'build.zip', allowEmptyArchive: true
-            }
+        //         // bat 'dir'
+        //         // bat 'type build.tar'
+        //         archiveArtifacts artifacts: 'build.zip', allowEmptyArchive: true
+        //     }
+        // }
+    }
+    post{
+        finally{
+             bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  checkout main'
+                    bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  merge ${GITHUB_BRANCH}'
+                    bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  push origin main'
         }
     }
 }
