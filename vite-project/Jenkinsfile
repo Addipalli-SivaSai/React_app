@@ -42,7 +42,7 @@ pipeline {
         }
           stage('Archive Artifacts') {
             steps {
-                bat 'powershell.exe -Command "Compress-Archive -Path vite-project\\dist\\* -DestinationPath build.zip"'
+                bat 'powershell.exe -Command "Compress-Archive -Path vite-project\\dist\\* -DestinationPath build.zip -Update"'
  
                 // bat 'dir'
                 bat 'type build.tar'
