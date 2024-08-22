@@ -55,7 +55,7 @@ pipeline {
     post{
         always{
              bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  checkout main'
-                    bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  merge siva'
+                    bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  merge origin/siva'
                     bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  push origin main'
         }
     }
