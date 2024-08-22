@@ -54,9 +54,15 @@ pipeline {
     }
     post{
         always{
-             bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  checkout main'
-                    bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  merge origin/siva'
-                    bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  push origin main'
+             bat ''' cd vite-project
+             C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  checkout main'''
+
+                    bat ''' cd vite-project 
+                    C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  merge origin/siva '''
+
+                    bat '''
+                    cd vite-project
+                    C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  push origin main '''
         }
     }
 }
