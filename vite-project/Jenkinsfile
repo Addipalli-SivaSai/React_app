@@ -10,6 +10,7 @@ pipeline {
             steps {
                bat 'npm -v'
                bat 'node -v'
+               bat 'git -v'
             }
         }
         stage('Building') {
