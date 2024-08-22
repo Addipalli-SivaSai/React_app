@@ -11,7 +11,7 @@ pipeline {
             steps {
                bat 'npm -v'
                bat 'node -v'
-               bat 'git -v'
+               bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe -v'
             }
         }
         stage('Building') {
