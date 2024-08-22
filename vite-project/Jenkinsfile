@@ -30,7 +30,7 @@ pipeline {
                         bat ''' 
                         C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.sonar.SonarRunnerInstallation\\sonarqubescanner\\bin\\sonar-scanner\
                 -Dsonar.projectKey=sivasai-jenkins_react\
-                 -Dsonar.sources=HelloWorldMaven\\src\\main\\java\
+                 -Dsonar.sources=VITE-PROJECT\\src\
                  -Dsonar.organization=sivasai-jenkins\
                  -Dsonar.login=3cade956570c411a53b32955b9337e4281d5d6fd\
                  '''
