@@ -3,6 +3,7 @@ pipeline {
 
     tools {
         nodejs "react"
+        tool name: 'github', type: 'git'
     }
 
     stages {
