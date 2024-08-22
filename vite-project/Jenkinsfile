@@ -23,25 +23,25 @@ pipeline {
              '''
             }
         }
-        stage("static code analisys")
-        {
-          steps {
-                script {
-                    def scannerHome = tool name: 'sonarqubescanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-                    withSonarQubeEnv('sonarqube') {
-                        bat ''' 
-                        C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.sonar.SonarRunnerInstallation\\sonarqubescanner\\bin\\sonar-scanner\
-                -Dsonar.projectKey=sivasai-jenkins_react\
-                 -Dsonar.sources=VITE-PROJECT\\src\
-                 -Dsonar.organization=sivasai-jenkins\
-                 -Dsonar.login=3cade956570c411a53b32955b9337e4281d5d6fd\
-                 '''
-                    }
-                }
-            }
+        // stage("static code analisys")
+        // {
+        //   steps {
+        //         script {
+        //             def scannerHome = tool name: 'sonarqubescanner', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
+        //             withSonarQubeEnv('sonarqube') {
+        //                 bat ''' 
+        //                 C:\\ProgramData\\Jenkins\\.jenkins\\tools\\hudson.plugins.sonar.SonarRunnerInstallation\\sonarqubescanner\\bin\\sonar-scanner\
+        //         -Dsonar.projectKey=sivasai-jenkins_react\
+        //          -Dsonar.sources=VITE-PROJECT\\src\
+        //          -Dsonar.organization=sivasai-jenkins\
+        //          -Dsonar.login=3cade956570c411a53b32955b9337e4281d5d6fd\
+        //          '''
+        //             }
+        //         }
+        //     }
 
 
-        }
+        // }
         //   stage('Archive Artifacts') {
         //     steps {
         //         bat 'powershell.exe -Command "Compress-Archive -Path vite-project\\dist\\* -DestinationPath build.zip -Update"'
@@ -55,7 +55,7 @@ pipeline {
     post{
         always{
              bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  checkout main'
-                    bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  merge ${GITHUB_BRANCH}'
+                    bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  merge siva'
                     bat 'C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  push origin main'
         }
     }
