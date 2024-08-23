@@ -52,17 +52,17 @@ pipeline {
         //     }
         // }
     }
-    // post{
-    //     always{
-    //          bat ''' cd vite-project
-    //          C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  checkout main'''
+    post{
+        always{
+             bat ''' cd vite-project
+            git checkout main'''
 
-    //                 bat ''' cd vite-project 
-    //                 C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  merge origin/siva '''
+                    bat ''' cd vite-project 
+                    git  merge origin/siva '''
 
-    //                 bat '''
-    //                 cd vite-project
-    //                 C:\\Users\\40038237\\AppData\\Local\\Programs\\Git\\cmd\\git.exe  push origin main '''
-    //     }
-    // }
+                    bat '''
+                    cd vite-project
+                    git  push origin main '''
+        }
+    }
 }
