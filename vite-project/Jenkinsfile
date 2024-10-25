@@ -52,17 +52,5 @@ pipeline {
         //     }
         // }
     }
-    post{
-        always{
-             bat ''' cd vite-project
-            git checkout main'''
-
-                    bat ''' cd vite-project 
-                    git  merge origin/siva '''
-
-                    bat '''
-                    cd vite-project
-                    git  push origin main '''
-        }
-    }
+   
 }
